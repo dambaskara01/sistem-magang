@@ -17,6 +17,12 @@ class User extends Authenticatable
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
+    protected $primaryKey = 'id_user';
+
+    public $incrementing = true;
+
+    protected $keyType = 'int';
+
     /**
      * Get the attributes that should be cast.
      *
