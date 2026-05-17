@@ -17,9 +17,10 @@ class DatabaseSeeder extends Seeder
         DB::table('documents')->delete();
         
         $this->call([
+            AdminSeeder::class,
             UserSeeder::class,
             InternshipSeeder::class,
-            DocumentSeeder::class
+            DocumentSeeder::class,
         ]);
     }
 }

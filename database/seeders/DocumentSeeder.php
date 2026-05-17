@@ -13,14 +13,6 @@ class DocumentSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('documents')->insert([
-            [
-                'id_doc' => 1,
-                'id_intern' => 1,
-                'file' => 'https://dbdiagram.io/d',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-        ]);
+        
     }
 }

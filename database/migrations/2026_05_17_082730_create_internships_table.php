@@ -12,16 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('internships', function (Blueprint $table) {
-            $table->id('id_intern');
-            $table->unsignedBigInteger('id_user');
+            $table->id();
             $table->string('perusahaan');
             $table->string('posisi');
-            $table->string('tanggal_mulai');
-            $table->string('tanggal_selesai');
-            $table->enum('status', ['pending', 'diterima', 'ditolak'])->default('pending');
+            $table->text('deskripsi')->nullable();
+            $table->date('tanggal_mulai');
+            $table->date('tanggal_selesai');
             $table->timestamps();
-
-            $table->foreign('id_user')->references('id_user')->on('users');
         });
     }
     public function down(): void
